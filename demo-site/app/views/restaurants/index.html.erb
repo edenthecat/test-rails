@@ -1,0 +1,8 @@
+<h2>WHAT A BUNCH OF TASTY STUFF</h2>
+
+<h3>There are <%= @restaurants.count %>  restaurants</h3>
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li><%= restaurant[:name] %> (<%= restaurant[:category] %>) - <%= restaurant[:address] %></li>
+  <% end %>
+</ul>

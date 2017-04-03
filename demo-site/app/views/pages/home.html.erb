@@ -1,0 +1,30 @@
+<h1>Welcome home</h1>
+
+<%= link_to "About", about_path %>
+
+<p>The time right now is <%= Time.now %></p>
+
+<ul>
+  <% @categories.each do |category| %>
+    <li><%= category %></li>
+  <% end %>
+</ul>
+
+<form action="/restaurants" method="get">
+  <input type="text" name="food_type" placeholder="what kind of food?">
+  <input type="submit">
+</form>
+
+<form action="/restaurants" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="name">
+  <input type="text" name="address">
+  <input type="submit">
+</form>
+
+
+
+
+
+
+
